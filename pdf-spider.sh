@@ -39,7 +39,7 @@ do
     url_sub_list=$(curl -s "${url_base}/${url_sub}" | grep "^  <a href=" | cut -d'"' -f2 | sed 's# #%20#g')
     for url_pdf in ${url_sub_list}
     do
-        pdf_name=$(echo $url_pdf | sed 's#%20##g' )
+        pdf_name=$(echo "$url_pdf" | sed 's#%20##g' )
         wget "${url_base}/${url_sub_wo_index}${url_pdf}" -O "${dir_save}/${pdf_name}" -o ->> "${dir_save}/wget.log"
     done
 done
