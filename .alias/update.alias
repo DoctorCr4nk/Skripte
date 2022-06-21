@@ -1,0 +1,1 @@
+alias update="sudo zypper --non-interactive refresh ; sudo zypper --non-interactive dist-upgrade --download-only ; zypper --non-interactive list-updates"
