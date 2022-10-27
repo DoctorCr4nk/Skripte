@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author:       Alexander Mueller
 # Email:        amueller@doctorcrank.de
-# Version:      0.1
+# Version:      1.0
 # Date:         2022-02-24
 # Comment:      NOT usable before modification
 # Description:  Downloads PDF files from a certain website.

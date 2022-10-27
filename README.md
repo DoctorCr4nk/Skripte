@@ -7,10 +7,13 @@
 
 This is my collection of various small scripts.
 
-## pdf-spider **0.1**
-
-Used to download multiple PDFs from a website.
-
-### template **0.1**
-
-A simple template for scripts
+| Name | Version | Description | Comment |
+| -- | -- | -- | -- |
+| Bash |
+| calc_fsize.sh | 1.0 | Calculates file size of downloaded videos and compares them | unfinished |
+| pdf-spider.sh | 1.0 | Simple webcrawler to download pdfs | works |
+| template.sh | 1.0 | This script will generate a new script based on this template | Will be replaced by a python script |
+| yt-channel-downloader.sh | 1.0 | for loop to download youtube channels | works |
+| Python |
+| create_template.py |  | This script will generate a new script based on a template | planned |
+|  |  |  |  |
