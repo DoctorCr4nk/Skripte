@@ -1,4 +1,11 @@
 #!/bin/bash
+## Author:       Alexander Mueller
+## Email:        amueller@doctorcrank.de
+## Version:      1.1
+## Date:         2022-10-27
+## Comment:
+## Description:  for loop to download youtube channels
+
 channels_mr2="https://www.youtube.com/channel/UCP9OdCtr2q13Gnj-F3uGOcw
 https://www.youtube.com/c/ErikSeastead1
 https://www.youtube.com/user/heeltoemotorsport

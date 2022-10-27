@@ -1,7 +1,13 @@
 #!/bin/bash
+## Author:       Alexander Mueller
+## Email:        amueller@doctorcrank.de
+## Version:      1.1.p
+## Date:         2022-02-24
+## Comment:      In progress (stale)
+## Description:  Calculates file size of downloaded videos and compares them
 
 path_dir_videos="/mnt/share/Videos"
-path_dir_youtube="${path_dir_videos}/Youtube"
+#path_dir_youtube="${path_dir_videos}/Youtube"
 path_dir_twitch="${path_dir_videos}/TwitchVODs"
 path_file_csv="${path_dir_videos}/fsize.csv"
 

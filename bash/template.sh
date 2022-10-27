@@ -1,10 +1,10 @@
 #!/bin/bash
-# Author:       Alexander Mueller
-# Email:        amueller@doctorcrank.de
-# Version:      1
-# Date:         2022-07-21
-# Comment:      
-# Description:  This script will generate a new script based on this template
+## Author:       Alexander Mueller
+## Email:        amueller@doctorcrank.de
+## Version:      1.1.d
+## Date:         2022-10-27
+## Comment:      Deprecated, use create_template.py instead
+## Description:  This script will generate a new script based on this template
 
 author=$(git config --list | grep "user.name" | cut --delimiter "=" --fields "2")
 email=$(git config --list | grep "user.email" | cut --delimiter "=" --fields "2")
@@ -13,8 +13,6 @@ date=$(date +%Y-%m-%d)
 comment="Wow is this a cool script generator"
 description="Check out my other scripts at https://github.com/DoctorCr4nk"
 path_file_script="${1}"
-arg_quiet=""
-arg_verbose=""
 
 usage ()
 {
@@ -50,11 +48,11 @@ echo "${script_name} will be generated!"
 exit 2
 
 echo '#!/bin/bash'                      | tee "${path_file_script}"
-echo '# Author:       '"${author}"      | tee --append "${path_file_script}"
-echo '# Email:        '"${email}"       | tee --append "${path_file_script}"
-echo '# Version:      '"${version}"     | tee --append "${path_file_script}"
-echo '# Date:         '"${date}"        | tee --append "${path_file_script}"
-echo '# Comment:      '"${comment}"     | tee --append "${path_file_script}"
-echo '# Description:  '"${description}" | tee --append "${path_file_script}"
+echo '## Author:       '"${author}"      | tee --append "${path_file_script}"
+echo '## Email:        '"${email}"       | tee --append "${path_file_script}"
+echo '## Version:      '"${version}"     | tee --append "${path_file_script}"
+echo '## Date:         '"${date}"        | tee --append "${path_file_script}"
+echo '## Comment:      '"${comment}"     | tee --append "${path_file_script}"
+echo '## Description:  '"${description}" | tee --append "${path_file_script}"
 
 echo "${path_file_script} was created"
