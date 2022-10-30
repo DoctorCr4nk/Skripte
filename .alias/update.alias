@@ -1,1 +1,1 @@
-alias zupdate="sudo zypper --non-interactive refresh; sudo zypper --non-interactive dist-upgrade --download-only --dry-run; zypper --non-interactive --quiet list-updates"
+alias zupdate="sudo zypper --non-interactive refresh; sudo zypper --non-interactive dist-upgrade --auto-agree-with-licenses --download-only --dry-run; zypper --non-interactive --quiet list-updates"
