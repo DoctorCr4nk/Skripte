@@ -7,7 +7,7 @@
 
 path_dir_docker="/home/amueller/Docker"
 container_list_all=$(for path_file_dockerfile in $(ls "${path_dir_docker}/"*"/"*".yml"); do echo "${path_file_dockerfile}" | cut --delimiter='/' --fields='5'; done | xargs)
-container_list_default="changedetection grafana heimdall redmine smokeping"
+container_list_default=$(cat ${path_dir_docker}/container.list)
 
 if [[ "${2}" == '--all' || "${2}" == '-a' ]]
 then
