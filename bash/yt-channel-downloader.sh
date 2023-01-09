@@ -44,3 +44,5 @@ do
     echo "${channel}" | tee --append "/mnt/share/Videos/Youtube/log"
     yt-dlp --output '/mnt/share/Videos/Youtube/%(channel)s/%(release_date)s_%(title)s' --no-overwrites --write-description --write-info-json "${channel}" | tee --append "/mnt/share/Videos/Youtube/log"
 done
+
+#for video in "https://www.youtube.com/watch?v=gNi_6U5Pm_o" "https://www.youtube.com/watch?v=R9gXtvSyTzA" ; do youtube-dl -x --audio-format mp3 "${video}" & done
