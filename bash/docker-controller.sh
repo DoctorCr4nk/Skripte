@@ -1,8 +1,8 @@
 #!/bin/bash
 ## Author:       Alexander Mueller
 ## Email:        amueller@doctorcrank.de
-## Version:      1.1
-## Date:         2022-12-16
+## Version:      1.2
+## Date:         2023-01-20
 ## Description:  Controll your docker containers
 
 path_dir_docker="/home/amueller/Docker"
@@ -35,8 +35,9 @@ do
 			docker-compose --file "${path_file_dockerfile}" up --detach
 			;;
 		update)
-			docker-compose --file "${path_file_dockerfile}" down
 			docker-compose --file "${path_file_dockerfile}" pull
+			docker-compose --file "${path_file_dockerfile}" down
+			sleep 1
 			docker-compose --file "${path_file_dockerfile}" up --detach
 			;;
 		*)
