@@ -3,7 +3,6 @@
 ## Email:        amueller@doctorcrank.de
 ## Version:      1.1
 ## Date:         2023-02-27
-## Comment:      In development (active)
 ## Description:  This script will generate a new script template
 
 import argparse
@@ -21,12 +20,10 @@ header_defaults = {
     'email' : 'amueller@doctorcrank.de',
     'file_extensions' : {
         'sh' : 'bash',
-        'py' : 'python3'
-    },
+        'py' : 'python3'},
     'shebang' : {
         'bash' : '#!/bin/bash',
-        'python3' : '#!/usr/bin/python3'
-        },
+        'python3' : '#!/usr/bin/python3'},
     'version' : '1.0'}
 
 ## Functions
@@ -85,7 +82,6 @@ def main():
     parser.add_argument('-n', '--name', help='Name of the generated script', required=True)
     parser.add_argument('-s', '--shebang', help='Complete shebang line or keyword like bash')
     parser.add_argument('-v', '--version')
-
     assign_values(vars(parser.parse_args()))
     create_script()
 
