@@ -65,12 +65,12 @@ def create_script():
     new_script.close()
     new_script = open(header["name"], "a")
     for key in header.keys():
-        if not key == "shebang":
-            if len(key) <= 5:
-                spacer = "\t\t"
-            else:
+        if not key in ["name", "shebang"]:
+            if len(key) < 6:
                 spacer = "\t"
-            new_script.write("# " + key + spacer + header[key] + "\n")
+            else:
+                spacer = ""
+            new_script.write("## " + key + spacer + "\t\t" + header[key] + "\n")
     new_script.close()
     print("Created the script: " + header["name"])
 
